@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Tasarımı Final Ödevi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	<style>
+		body{
+			background-image: url("arkaplan.png");
+			background-repeat: no-repeat;
+		}
+        .kutu1{
+            width: 83%;
+            height: 150px;
+            border: #00897B 5px solid;
+            background-color: 	#FF9800;
+            position: absolute;
+            color: black;
+            top: 10px;
+            left: 50px; 
+        }
+        .yazi{
+        	position: absolute;
+        	margin-left:88%;
+        	margin-top: 15px;
+        	height: 120px;
+        	width: 150px;
+        	background-color: 	#FFA726;
+        	transform: rotate(270deg);
+			transform-origin: left top 20;
+        }
+        #yazii{
+        	margin-left: 9px;
+        	margin-top: 40px;
+        	text-align: center; 
+        	color: white;
+        }
+        .yazitipi{
+        	position: absolute;
+        	margin-left:100px;
+        	margin-top:30px;
+        	font-size: 20px;
+        	color:white;
+        	text-align: center;
+        }
+        select{
+        	width: 170px;
+        	height: 30px;
+        	margin-top: 10px;
+        	text-align: center;
+        }
+        .yaziboyut{
+        	position: absolute;
+        	margin-left:450px;
+        	margin-top:30px;
+        	font-size: 20px;
+        	color:white;
+        	text-align: center;
+        }
+        #yazib{
+        	margin-top: 10px;
+        }
+        .yazirengi{
+        	position: absolute;
+        	margin-left:800px;
+        	margin-top:30px;
+        	font-size: 20px;
+        	color:white;
+        	text-align: center;
+        }
+        #renk{
+        	margin-top: 10px;
+        	height: 25px;
+        	width: 150px;
+        }
+        .kutu2{
+            width: 83%;
+            height: 150px;
+            border: #FF9800 5px solid;
+            background-color: 	#00897B;
+            position: absolute;
+            color: black;
+            top: 180px;
+            left: 50px;
+        }
+        .iyazi{
+        	position: absolute;
+        	margin-left:88%;
+        	margin-top: -3px;
+        	height: 120px;
+        	width: 150px;
+        	background-color: 	#009688;
+        	transform: rotate(270deg);
+			transform-origin: left top 20;
+        }
+        #iyazii{
+        	margin-left: 3px;
+        	margin-top: 32px;
+        	text-align: center; 
+        	color: white;
+        }
+        .borderstil{
+        	position: absolute;
+        	margin-left:100px;
+        	margin-top:30px;
+        	font-size: 20px;
+        	color:white;
+        	text-align: center;
+        }
+        .borderboyut{
+        	position: absolute;
+        	margin-left:450px;
+        	margin-top:30px;
+        	font-size: 20px;
+        	color:white;
+        	text-align: center;
+        }
+        #borderk{
+        	margin-top: 10px;
+        }
+        .borderrengi{
+        	position: absolute;
+        	margin-left:800px;
+        	margin-top:10px;
+        	font-size: 20px;
+        	color:white;
+        	text-align: center;
+        }
+        #brenk{
+        	margin-top: 10px;
+        	height: 25px;
+        	width: 150px;
+        }
+        .arkaplanrengi{
+        	position: absolute;
+        	margin-left:800px;
+        	margin-top:55px;
+        	font-size: 20px;
+        	color:white;
+        	text-align: center;
+        }
+        #arenk{
+        	margin-top: 10px;
+        	height: 25px;
+        	width: 150px;
+        }
+        .metin{
+			position: absolute;
+			margin-top: 300px;
+			margin-left: 50px;
+			float: left;
+		}
+		#metin{
+			width: 45%;
+        	height: 250px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #FF9800;
+		}
+		.sonucc{
+			position: absolute;
+			margin-top: 300px;
+			margin-left: 46%;
+		}
+        #sonuc{
+        	width: 75%;
+        	height: 250px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #00897B;
+            font-family: 'Notable', sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+	<div class="kutu1">
+		<div class="yazitipi">Yazı Tipi<br>
+		<select onchange="YaziStili()" id="yazistil">
+			<option value="'Indie Flower', cursive">Indie Flower</option>
+            <option value="'Yellowtail', cursive">Yellowtail</option>
+            <option value="'Orbitron', sans-serif">Orbitron</option>
+            <option value="'Piedra', cursive">Piedra</option>
+            <option value=" 'Dancing Script', cursive">Dancing Script</option>
+		</select>
+		</div>
+		<div class="yaziboyut">Yazı Büyüklüğü<br><input type="range" min="10" max="500" id="yazib" onmousemove="YaziBuyukluguDegis()"></div>
+		<div class="yazirengi">Yazı Rengi<br><input type="color" name="renk" id="renk" onchange="YaziRengiDegis()"/></div>
+		<div class="yazi"><h1 id="yazii">YAZI</h1></div>
+	</div><br>
+	
+	<div class="kutu2">
+		<div class="borderstil">Border Stili<br>
+		<select onchange="CizgiStili()" id="cizgiistil">
+			<option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+            <option value="dotted dashed solid double">Mix</option>
+		</select>
+		</div>
+		<div class="borderboyut">Border Kalınlığı<br><input type="range" min="1" max="50" id="borderk" onchange="BorderKalınlıgı()"></div>
+		<div class="borderrengi">Border Rengi<br><input type="color" name="renk" id="brenk" onchange="BorderRengiDegis()"/></div><br>
+		<div class="arkaplanrengi">Arkaplan Rengi<br><input type="color" name="renk" id="arenk" onchange="ArkaPlanDegis()"/></div>
+		<div class="iyazi"><h2 id="iyazii">ARKAPLAN & ÇİZGİ</h2></div>
+	</div><br>
+	<div class="metin">METİN:<br><textarea rows="5" cols="150" name="metin" id="metin" onkeyup="YaziYazma()" ></textarea></div><div class="sonucc">SONUÇ:<br><textarea rows="5" cols="150" name="sonuc" id="sonuc"></textarea></div>
+
+	<script>
+		function YaziYazma(){
+            document.getElementById("sonuc").innerHTML="";
+            document.getElementById("sonuc").innerHTML+=
+            document.getElementById("metin").value;
+        }
+        function YaziStili(){
+            document.getElementById("sonuc").style.fontFamily=document.getElementById("yazistil").value;
+        }
+        function YaziBuyukluguDegis(){
+            document.getElementById("sonuc").style.fontSize=document.getElementById("yazib").value+"px";
+        }
+        function YaziRengiDegis(){
+            document.getElementById("sonuc").style.color=document.getElementById("renk").value;
+        }
+        function CizgiStili(){
+            document.getElementById("sonuc").style.borderStyle=document.getElementById("cizgiistil").value;
+        }
+        function ArkaPlanDegis(){
+            document.getElementById("sonuc").style.backgroundColor=document.getElementById("arenk").value;
+        }
+        function BorderKalınlıgı(){
+            document.getElementById("sonuc").style.borderWidth=document.getElementById("borderk").value+"px";
+        }
+        function BorderRengiDegis(){
+            document.getElementById("sonuc").style.borderColor=document.getElementById("brenk").value;
+        }
+	</script>
+</body>
+</html>

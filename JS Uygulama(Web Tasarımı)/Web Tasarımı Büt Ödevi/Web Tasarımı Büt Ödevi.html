@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tasarımı Bütünleme Sınavı</title>
+    <style>
+        .metin{
+			position: absolute;
+			margin-left: 10px;
+			float: left;
+		}
+		#metin{
+            border-width: 3px;
+            border-style: solid;
+            border-color: grey;
+		}
+        .numara1{
+            position: absolute;
+            font-size: 30px;
+            margin-top: 175px;
+            margin-left: 38%;
+        }
+        #daire{
+            position: absolute;
+            margin-top: 150px;
+            margin-left: 43%;
+        }
+        .numara2{
+            position: absolute;
+            font-size: 30px;
+            margin-top: 325px;
+            margin-left: 38%;
+        }
+        #kare{
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 43%;
+        }
+        .numara3{
+            position: absolute;
+            font-size: 30px;
+            margin-top: 475px;
+            margin-left: 38%;
+        }
+        #ucgen{
+            position: absolute;
+            margin-top: 450px;
+            margin-left: 43%;
+        }
+        .numara4{
+            position: absolute;
+            font-size: 30px;
+            margin-top: 620px;
+            margin-left: 38%;
+        }
+        #dikdortgen{
+            position: absolute;
+            margin-top: 600px;
+            margin-left: 43%;
+        }
+    </style>
+</head>
+<body>
+    <div class="metin">Lütfen Bir Kelime Yazınız:<br><textarea rows="5" cols="150" name="metin" id="metin" onkeyup="yaziYazma()"></textarea></div>
+    <div class="numara1">1</div><div id="daire"><img src="daire.png"></div>
+    <div class="numara2">2</div><div id="kare"><img src="kare.png"></div>
+    <div class="numara3">3</div><div id="ucgen"><img src="ucgen.png"></div>
+    <div class="numara4">4</div><div id="dikdortgen"><img src="dikdortgen.png"></div>
+
+    <!-- JS kodları -->
+    <script>
+        function yaziYazma(){
+            var metin=document.getElementById("metin").value;
+            document.getElementById("metin").innerHTML="";
+            if (metin=="daire") {
+                document.getElementById("daire").innerHTML='<img src="dairek.png"/>';
+                metin=="";
+            } else if(metin=="kare") {
+                document.getElementById("kare").innerHTML='<img src="karek.png"/>';
+            } else if(metin=="üçgen") {
+                document.getElementById("ucgen").innerHTML='<img src="ucgenk.png"/>';
+            }else if(metin=="dikdörtgen") {
+                document.getElementById("dikdortgen").innerHTML='<img src="dikdortgenk.png"/>';
+            }else if(metin==""){
+                document.getElementById("daire").innerHTML='<img src="daire.png"/>';
+                document.getElementById("kare").innerHTML='<img src="kare.png"/>';
+                document.getElementById("ucgen").innerHTML='<img src="ucgen.png"/>';
+                document.getElementById("dikdortgen").innerHTML='<img src="dikdortgen.png"/>';
+            }
+        }
+    </script>
+</body>
+</html>
